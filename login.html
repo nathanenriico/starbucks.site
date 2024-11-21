@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="stylelogin.css">
+    <title>Login Starbucks</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="form">
+                <h1>Criar uma conta</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <input type="text" placeholder="Nome" class="inputs required" oninput="NameValidate()">
+                <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+
+                <input type="email" placeholder="Email" class="inputs required" oninput="EmailValidate()">
+                <span class="span-required">Digite um email válido</span>
+
+                <input type="password" placeholder="Senha" class="inputs required" oninput="mainPasswordValidate()">
+                <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
+
+                <input type="password" placeholder="Repita sua Senha" class="inputs required" oninput="comparePassword()">
+                <span class="span-required">Senhas devem ser compatíveis</span>
+
+                <button>Inscrever-se</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Entrar</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use sua senha de e-mail</span>
+                <input type="email" placeholder="Email" id="email">
+                <input type="password" placeholder="Senha" id="senha">
+                <a href="#">Esqueceu sua senha?</a>
+                <button type="submit" onclick="logar(); return false";>Entrar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem vindo de volta!</h1>
+                    <p>Insira seus dados pessoais para usar todos os recursos do site</p>
+                    <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Olá amigo!</h1>
+                    <p>Registre-se com seus dados pessoais para usar todos os recursos do site</p>
+                    <button class="hidden" id="register">Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
